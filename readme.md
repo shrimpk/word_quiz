@@ -20,3 +20,12 @@ yyyymmdd.txt의 형식으로 그날 연습할 영단어를 넣습니다. 예시 
 node app 또는 nodemon app
 
 port.conf에서 포트 설정하세요. 127.0.0.1로 접속하면 뭔가 나옵니다!
+
+
+
+        Based on WordNet
+        Citations:
+        George A. Miller (1995). WordNet: A Lexical Database for English.
+        Communications of the ACM Vol. 38, No. 11: 39-41.
+        Christiane Fellbaum (1998, ed.) WordNet: An Electronic Lexical Database. Cambridge, MA: MIT Press.
+        WordNet: An Electronic Lexical Database(citation above) is available from MIT Press.
