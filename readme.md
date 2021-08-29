@@ -18,3 +18,5 @@ yyyymmdd.txt의 형식으로 그날 연습할 영단어를 넣습니다. 예시 
 5. 실행
 
 node app 또는 nodemon app
+
+port.conf에서 포트 설정하세요. 127.0.0.1로 접속하면 뭔가 나옵니다!
