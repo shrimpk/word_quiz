@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="master.css">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<script>
+    var answer = '<%= data[5] %>'
+
+    function check(param1) {
+        if (param1 == answer) {
+            pv("correct/<%= data[0] %>/"+param1, function() {
+                window.location.href = "/meaning"
+            })
+        } else {
+            pv("false/<%= data[0] %>/"+param1, function() {
+                window.location.href = "/"
+            })
+        }
+    }
+
+    function pv(param, callback) {
+        httpRequest = new XMLHttpRequest()
+        httpRequest.open('post', "/" + param, true)
+        httpRequest.setRequestHeader('Content-Type', 'application/json')
+        httpRequest.send();
+        httpRequest.onload = function(e) {
+            if (httpRequest.readyState === 4) {
+                if (httpRequest.status === 200) {
+                    callback()
+                } else {
+                    console.error(xhr.statusText);
+                }
+            }
+        }
+        console.log("false");
+    }
+</script>
+
+<body>
+    <div class="secondary">
+        Words Quiz Beta
+    </div>
+    <div class="wrapper">
+        <div class="group padding">
+            <%= Math.floor(bar) %>%
+            <div class="third">
+            <div class="secondary-active" style="width: <%= bar %>%; height: calc(var(--font) / 2)">
+            </div>
+            </div>
+            <h3>Choose the one with a different meaning.</h3>
+        </div>
+        <div class="group padding secondary">
+            <h1>
+                <%= data[0] %>
+            </h1>
+            <div class="group padding">
+                <a class="button primary" onclick="check('<%= data[1] %>')">
+                    <%= data[1] %>
+                </a>
+                <a class="button primary" onclick="check('<%= data[2] %>')">
+                    <%= data[2] %>
+                </a>
+                <a class="button primary" onclick="check('<%= data[3] %>')">
+                    <%= data[3] %>
+                </a>
+                <a class="button primary" onclick="check('<%= data[4] %>')">
+                    <%= data[4] %>
+                </a>
+            </div>
+        </div>
+        <div class="group padding secondary">
+            <h2>
+                <%= before %>
+            </h2>
+            <div class="secondary padding">
+            <% for(var i in beforem){ %>
+                <div>
+                    <%= beforem[i] %>
+                </div>
+            <% } %>
+            </div>
+        </div>
+    </div>
+    <div class="secondary">
+        Made by Minjun Kim<br>
+        github.com/shrimpk
+        <div class="primary">Based on WordNet</div>
+        Citations:<br>
+        George A. Miller (1995). WordNet: A Lexical Database for English.<br>
+        Communications of the ACM Vol. 38, No. 11: 39-41.<br>
+        Christiane Fellbaum (1998, ed.) WordNet: An Electronic Lexical Database. Cambridge, MA: MIT Press.<br>
+        WordNet: An Electronic Lexical Database(citation above) is available from MIT Press.
+    </div>
+</body>
+
+</html>

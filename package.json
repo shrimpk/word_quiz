@@ -1,0 +1,19 @@
+{
+  "name": "word_quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm install"
+  },
+  "author": "shrimpk",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-cmd": "^5.0.0",
+    "node-latex": "^3.0.0",
+    "node-wordnet": "^0.1.12",
+    "wndb-with-exceptions": "^3.0.2"
+  }
+}

@@ -1,0 +1,112 @@
+\documentclass[10pt, twoside, twocolumn]{book}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,a4paper]{geometry}
+\usepackage{xetexko}
+\setmainfont{Noto Serif CJK KR}
+\usepackage[cmyk, dvipsnames, svgnames]{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{setspace}
+\setstretch{1.1}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage[calcwidth]{titlesec}
+\usepackage{endnotes}
+\captionsetup{belowskip=0pt}
+\setlength{\belowcaptionskip}{-10pt}
+
+\newcounter{sentence}
+\setcounter{sentence}{0}
+
+\newcommand{\wordtest}[6]{
+\stepcounter{sentence}
+    \begin{mdframed}[
+        linecolor=White!100,
+        roundcorner=5pt,
+        backgroundcolor=White!75,
+        leftmargin=0.1cm,
+        rightmargin=0.1cm,
+        nobreak=true]
+        {
+        \begin{small}
+        \textbf{\arabic{sentence}. #1}\textcolor{White}{\endnote{#6}}
+            \\(A) #2
+            \\(B) #3
+            \\(C) #4
+            \\(D) #5
+        \end{small}
+        }
+    \end{mdframed}
+}
+
+\newcommand{\wordteste}[6]{
+\stepcounter{sentence}
+    \begin{mdframed}[
+        linecolor=White!100,
+        roundcorner=5pt,
+        backgroundcolor=White!75,
+        leftmargin=0.1cm,
+        rightmargin=0.1cm,
+        nobreak=true]
+        {
+        \begin{small}
+        \textbf{\arabic{sentence}.}\textcolor{White}{\endnote{#6}}
+        \end{small}
+        \begin{footnotesize}
+            \begin{itemize}
+                #1
+            \end{itemize}
+        \end{footnotesize}
+        \begin{small}
+            \noindent(A) #2
+            \\(B) #3
+            \\(C) #4
+            \\(D) #5
+        \end{small}
+        }
+    \end{mdframed}
+}
+
+\newcommand{\wordmeaning}[2]{
+    \begin{mdframed}[
+        linecolor=White!100,
+        roundcorner=5pt,
+        backgroundcolor=White!75,
+        leftmargin=0.1cm,
+        rightmargin=0.1cm,
+        nobreak=true]
+        {
+        \begin{small}
+        \textbf{#1}
+        \end{small}
+        \begin{footnotesize}
+            \begin{itemize}
+                #2
+            \end{itemize}
+        \end{footnotesize}
+        }
+    \end{mdframed}
+}
+
+
+\newcommand{\wordmeaningl}[2]{
+    \begin{mdframed}[
+        linecolor=White!100,
+        roundcorner=5pt,
+        backgroundcolor=White!75,
+        leftmargin=0.1cm,
+        rightmargin=0.1cm]
+        {
+        \begin{small}
+        \textbf{#1}
+        \end{small}
+        \begin{footnotesize}
+            \begin{itemize}
+                #2
+            \end{itemize}
+        \end{footnotesize}
+        }
+    \end{mdframed}
+}
+
+\title{단어연습 - 20711 김민준}
+
+\begin{document}

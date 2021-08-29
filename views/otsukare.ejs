@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="master.css">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<script>
+</script>
+
+<body>
+    <div class="secondary">
+        Words Quiz Beta
+    </div>
+    <div class="wrapper">
+        <div class="group padding secondary">
+            <h1>
+                Quiz ended.
+            </h1>
+        </div>
+        <div class="group">
+            <h3>Your Score: <%= Math.floor((shitteru.length / (shitteru.length + wakannnai.length)) * 100) %> (<%= shitteru.length %> / <%= shitteru.length + wakannnai.length %>)</h3>
+        </div>
+        <div class="group padding secondary">
+            <h5>Here are the words that you should remember:</h5>
+            <% for(var i in wakannnai){ %>
+                <div class="primary">
+                    <%= wakannnai[i] %>
+                </div>
+            <% } %>
+            <br>
+            <h5>Synonyms:</h5>
+            <% for(var i in wakannnai3){ %>
+                <div class="primary">
+                    <%= wakannnai3[i] %>
+                </div>
+            <% } %>
+            <br>
+            <h5>It is good for you to memorize these words:</h5>
+            <% for(var i in wakannnai2){ %>
+                <div class="primary">
+                    <%= wakannnai2[i] %>
+                </div>
+            <% } %>
+        </div>
+        <div class="group padding secondary">
+            <h5>Here are the words that you know well:</h5>
+            <% for(var i in shitteru){ %>
+                <div class="primary">
+                    <%= shitteru[i] %>
+                </div>
+            <% } %>
+        </div>
+        <div class="group padding secondary-active">
+            You can download a PDF document that helps you to rememorize the words you practised.
+            <a class="button" href="/pdf/<%= filename %>.pdf">Download PDF here</a>
+        </div>
+    </div>
+    <div class="secondary">
+        Made by Minjun Kim<br>
+        github.com/shrimpk
+        <div class="primary">Based on WordNet</div>
+        Citations:<br>
+        George A. Miller (1995). WordNet: A Lexical Database for English.<br>
+        Communications of the ACM Vol. 38, No. 11: 39-41.<br>
+        Christiane Fellbaum (1998, ed.) WordNet: An Electronic Lexical Database. Cambridge, MA: MIT Press.<br>
+        WordNet: An Electronic Lexical Database(citation above) is available from MIT Press.
+    </div>
+</html>

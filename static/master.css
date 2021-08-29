@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url(/fonts/DungGeunMo.woff);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'PixelMplus12';
+    src: url(/fonts/PixelMplus12.woff);
+    font-style: normal;
+    font-weight: 700;
+}
+
+ :root {
+    --font: 2rem;
+    --white: #FFFFFF;
+    --black: #000000;
+    --blue: #000030;
+    --red: #900000;
+    --green: #009000;
+    --yellow: #909000;
+    --purple: #900090;
+    --skyblue: #000060;
+    --gray: #909090;
+    --primary: var(--black);
+    --secondary: var(--blue);
+    --third: var(--skyblue);
+    --font_c: #FFFFFF;
+    --font-c2: var(--gray);
+    --padding: 1rem;
+    --border: 0.1rem;
+    --margin: calc(var(--padding) / 2)
+}
+
+html {
+    font-size: var(--font);
+    word-break: break-all;
+    overflow-x: hidden;
+}
+
+div {
+    word-break: break-all;
+}
+
+code {
+    word-break: break-all;
+}
+
+pre {
+    word-break: break-all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: var(--font);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+.title,
+.cm-header-1:first-of-type+.cm-header-1 {
+    font-size: calc(var(--font) * 2);
+    padding-left: var(--padding);
+    padding-bottom: var(--padding);
+    text-shadow: 2px 2px gray;
+    display: block;
+}
+
+h2,
+.cm-header-2:first-of-type+.cm-header-2 {
+    font-size: calc(var(--font) * 1.5);
+    padding-left: var(--padding);
+    text-shadow: 1px 1px gray;
+    display: block;
+}
+
+h3,
+.cm-header-3:first-of-type+.cm-header-3 {
+    font-size: calc(var(--font) * 1.25);
+    padding-left: var(--padding);
+    text-shadow: 1px 1px gray;
+    margin-bottom: var(--padding);
+    display: block;
+}
+
+h4,
+.cm-header-4:first-of-type+.cm-header-4 {
+    padding-left: var(--padding);
+    text-shadow: 1px 1px gray;
+    margin-bottom: var(--padding);
+}
+
+body {
+    background: var(--bg);
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px;
+    font-family: 'DungGeunMo', 'PixelMplus12';
+    box-sizing: border-box;
+}
+
+body:target {
+    filter: blur(5px);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+b,
+strong {
+    text-shadow: 1px 1px white;
+}
+
+button {
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+nav {
+    background-color: var(--font_c);
+}
+
+input {
+    color: inherit;
+    border: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: var(--font);
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+}
+
+.thread {
+    padding: var(--padding);
+    background-color: var(--white);
+    color: black;
+    word-break: break-all;
+    overflow-x: hidden;
+}
+
+.listwrap {
+    border: 0;
+    padding: 0;
+    margin: var(--margin);
+}
+
+.list {
+    width: 100%;
+    border: 0;
+    margin: 0;
+}
+
+.sqr:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.auto-set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    padding: var(--padding);
+    margin: 0px;
+    background-color: var(--primary);
+    color: var(--font_c);
+    max-width: 100%;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.group {
+    padding: 0px;
+    border: 0px;
+    color: inherit;
+    box-sizing: border-box;
+    word-break: break-all;
+    overflow-x: hidden;
+}
+
+.primary {
+    color: white;
+    background-color: var(--primary);
+}
+
+.primary-active {
+    color: var(--primary);
+    background-color: var(--font_c);
+}
+
+.secondary {
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+.secondary-active {
+    color: var(--secondary);
+    background-color: var(--white);
+}
+
+.third {
+    color: white;
+    background-color: var(--third);
+}
+
+.third-active {
+    color: var(--third);
+    background-color: var(--font_c);
+}
+
+
+
+
+.gray {
+    color: var(--font_c2);
+    background-color: var(--gray);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.np {
+    padding-left: 0px;
+}
+
+.padding {
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+.margin {
+    margin: var(--margin);
+}
+
+.navbtn {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    margin: 0;
+    color: var(--primary);
+    background-color: var(--font_c);
+    border: 0px;
+}
+
+.navbtn:hover {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    margin: 0;
+    color: var(--font_c);
+    background-color: var(--primary);
+    border: 0px;
+}
+
+.navbtn-active {
+    color: var(--font_c);
+    background-color: var(--primary);
+}
+
+.fbutton:hover {
+    cursor: pointer;
+    filter: blur(1px);
+}
+
+.button {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    border: 0;
+    color: var(--font_c);
+    background-color: var(--primary);
+    display: inline-block;
+    text-align: center;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.np.button {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+    color: var(--font_c);
+    background-color: var(--primary);
+    display: inline-block;
+    text-align: center;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.button.secondary {
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+.button:hover {
+    background-color: var(--font_c);
+    color: var(--primary);
+}
+
+.button.secondary:hover {
+    color: var(--secondary);
+    background-color: var(--white);
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden:target {
+    display: inherit;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: var(--primary);
+    pointer-events: none;
+    color: inherit;
+    max-height: 100%;
+}
+
+.modal>div {
+    position: relative;
+    padding: var(--padding);
+    max-height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 100rem;
+}
+
+.modal2 {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.modal2>a>.bgm {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    color: inherit;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal2:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.x {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.pconly {
+    display: inherit;
+}
+
+.mbonly {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media ( max-width: 1920px) {
+     :root {
+        --font: 1.75rem;
+        --padding: 0.9rem;
+    }
+}
+
+@media ( max-width: 1280px) {
+     :root {
+        --font: 1.5rem;
+        --padding: 0.75rem
+    }
+    nav {
+        grid-template-columns: 1fr;
+    }
+    .grid-h {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .modal>div {
+        left: 10%;
+        top: 10%;
+        right: 10%;
+    }
+}
+
+@media ( max-width: 1024px) {
+     :root {
+        --font: 1.2rem;
+        --padding: 0.5rem
+    }
+    .pconly {
+        display: none;
+    }
+    .mbonly {
+        display: inherit;
+    }
+}
